@@ -1,0 +1,144 @@
+.livro-list-container {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.livro-list-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid #f0f0f0;
+}
+
+.livro-list-header h1 {
+  margin: 0;
+  color: #333;
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 60px 20px;
+  color: #666;
+}
+
+.empty-state p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.livro-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  gap: 20px;
+}
+
+.livro-card {
+  background: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.livro-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+.livro-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 15px;
+}
+
+.livro-card-header h3 {
+  margin: 0;
+  color: #333;
+  font-size: 18px;
+  font-weight: 600;
+  flex: 1;
+}
+
+.livro-card-actions {
+  display: flex;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.livro-info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-bottom: 15px;
+  font-size: 14px;
+  color: #666;
+}
+
+.livro-isbn,
+.livro-year,
+.livro-author,
+.livro-genre {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.livro-synopsis {
+  color: #666;
+  line-height: 1.5;
+  margin-bottom: 15px;
+  font-size: 14px;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  padding: 10px;
+  background-color: #f8f9fa;
+  border-radius: 4px;
+  border-left: 3px solid #007bff;
+}
+
+.livro-meta {
+  color: #999;
+  font-size: 12px;
+  border-top: 1px solid #f0f0f0;
+  padding-top: 10px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .livro-list-header {
+    flex-direction: column;
+    gap: 15px;
+    align-items: stretch;
+  }
+
+  .livro-list-header h1 {
+    text-align: center;
+  }
+
+  .livro-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .livro-card-header {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .livro-card-actions {
+    align-self: stretch;
+    justify-content: flex-end;
+  }
+
+  .livro-info {
+    grid-template-columns: 1fr;
+  }
+} 

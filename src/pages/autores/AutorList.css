@@ -1,0 +1,126 @@
+.autor-list-container {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.autor-list-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid #f0f0f0;
+}
+
+.autor-list-header h1 {
+  margin: 0;
+  color: #333;
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 60px 20px;
+  color: #666;
+}
+
+.empty-state p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.autor-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 20px;
+}
+
+.autor-card {
+  background: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.autor-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+.autor-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 15px;
+}
+
+.autor-card-header h3 {
+  margin: 0;
+  color: #333;
+  font-size: 18px;
+  font-weight: 600;
+  flex: 1;
+}
+
+.autor-card-actions {
+  display: flex;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.autor-biography {
+  color: #666;
+  line-height: 1.5;
+  margin-bottom: 15px;
+  font-size: 14px;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.autor-meta {
+  color: #999;
+  font-size: 12px;
+}
+
+.autor-birth {
+  margin-bottom: 8px;
+  color: #666;
+}
+
+.autor-created {
+  border-top: 1px solid #f0f0f0;
+  padding-top: 8px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .autor-list-header {
+    flex-direction: column;
+    gap: 15px;
+    align-items: stretch;
+  }
+
+  .autor-list-header h1 {
+    text-align: center;
+  }
+
+  .autor-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .autor-card-header {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .autor-card-actions {
+    align-self: stretch;
+    justify-content: flex-end;
+  }
+} 
